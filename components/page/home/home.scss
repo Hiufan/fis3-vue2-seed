@@ -1,0 +1,129 @@
+@import '../../../assets/scss/px2rem.scss';
+#home {
+    min-height: 100%;
+    background: #f78c2d url('../../../assets/images/home-bg.jpg') no-repeat 0 bottom;
+    background-size: 100% auto;
+    .top {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+    @at-root {
+        .shopping-enter {
+            position: absolute;
+            left: 50%;
+            bottom: px2rem(-56px);
+            height: px2rem(113px);
+            width: px2rem(910px);
+            transform: translateX(-50%);
+            background: url('../../../assets/images/home-btn.png') no-repeat;
+            background-size: 100%;
+                line-height: px2rem(100px);
+            .time-wrap {
+                width: px2rem(528px);
+                text-align: center;
+
+                .i-clock {
+                    display: inline-block;
+                    height: px2rem(48px);
+                    width: px2rem(44px);
+                    vertical-align: text-bottom;
+                    background: url('../../../assets/images/i-clock.png?__inline') 0/100% 100% no-repeat;
+                }
+                strong {
+                    @include font-dpr(24px);
+                    font-weight: bolder;
+                        vertical-align: middle;
+
+                }
+                p {
+                    display: inline-block;
+                    @include font-dpr(20px);
+                    color: #000;
+                    span {
+                        display: inline-block;
+                        height: px2rem(46px);
+                        padding: 0 px2rem(4px);
+                        margin: 0 px2rem(4px);
+                        background-color: #000;
+                        line-height: px2rem(46px);
+                        color: #fff;
+                        border-radius: px2rem(6px);
+
+                    }
+                }
+            }
+            .go-shop {
+                float: right;
+                height: px2rem(100px);
+                width: px2rem(372px);
+                text-align: center;
+                font-weight: bold;
+                @include font-dpr(24px);
+
+                color: #fff;
+                span {
+                    display: inline-block;
+                    height: px2rem(29px);
+                    width: px2rem(29px);
+                    margin-left: px2rem(4px);
+                line-height: px2rem(100px);
+                    vertical-align: middle;
+
+                    background: url('../../../assets/images/i-arrow.png?__inline') 0/100% 100% no-repeat;
+                }
+            }
+
+        }
+        .home-brand-list {
+            padding: px2rem(100px) px2rem(68px) px2rem(20px);
+            text-align: center;
+            // width: px2rem(982px);
+            .title {
+                float: left;
+                height: px2rem(221px);
+                width: px2rem(462px);
+                margin-right: px2rem(20px);
+                margin-left: px2rem(-42px);
+                background: url('../../../assets/images/home-button.png') 0 / 100% no-repeat;
+            }
+            .tips {
+                float: left;
+                width: 100%;
+                text-align: center;
+                @include font-dpr(28px);
+                color: #ffffff;
+                line-height: px2rem(100px);
+            }
+            a {
+                float: left;
+                width: px2rem(447px);
+                margin-bottom: px2rem(24px);
+                img {
+                    display: block;
+                    // height: px2rem(194px);
+                    height: px2rem(205px);
+                    width: px2rem(410px);
+                    margin: 0 auto;
+                    border: px2rem(10px) solid #5b2f00;
+                    background-color: #fff;
+                    border-radius: px2rem(26px);
+                }
+                span {
+                    display: block;
+                    height: px2rem(66px);
+                    width: px2rem(447px);
+                    margin-top: px2rem(-33px);
+                    border-radius: 50%;
+                    background-color: rgba(91, 47, 0, .68);
+                }
+            }
+            a:nth-of-type(2n) {
+                margin-left: px2rem(45px);
+            }
+        }
+    }
+}

@@ -1,16 +1,30 @@
 {
-  "name": "fis3-vue2-seed",
-  "version": "1.0.0",
-  "description": "Using fis3 to build vue(2.0) application",
-  "main": "app.js",
-  "repository": "git@github.com:Hiufan/fis3-vue2-seed.git",
-  "author": "Hiufan@qq.com",
-  "license": "MIT",
+  "name": "bikegroup",
+  "version": "0.0.1",
+  "description": "biketo Activity bikegroup",
+  "private": true,
+  "scripts": {
+    "s": "fis3 server start",
+    "w": "fis3 release -cwL",
+    "prod": "fis3 release prod -cd ../mobile_prod"
+  },
+  "keywords": [
+    "activity",
+    "bikegroup"
+  ],
   "dependencies": {
-    "element-ui": "^1.0.2",
-    "vue": "^2.0.8",
-    "vue-resource": "^1.0.3",
-    "vue-router": "^2.0.3",
-    "vuex": "^2.0.0"
+    "vue": "^2.0.0",
+    "vue-router": "^2.0.0",
+    "vue-server-renderer": "^2.0.0",
+    "vuex": "^2.0.0",
+    "vuex-router-sync": "^3.0.0"
+  },
+  "devDependencies": {
+    "fis3-hook-commonjs": "^0.1.25",
+    "fis3-hook-relative": "^1.0.9",
+    "fis3-postpackager-loader": "^2.0.5",
+    "fis3-preprocessor-autoprefixer": "^0.1.1",
+    "fis-parser-node-sass": "^0.1.9",
+    "fis3-preprocessor-browserify": "^1.0.0"
   }
 }

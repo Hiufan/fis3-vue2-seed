@@ -1,0 +1,37 @@
+@import '../../../assets/scss/px2rem.scss';
+#detail {
+    height: 100%;
+    // overflow: hidden;
+    @at-root {
+        .detail-wrap-w {
+            padding-top: px2rem(38px);
+            padding-bottom: px2rem(38px);
+
+
+        }
+        .detail-wrap {
+            width: px2rem(990px);
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: px2rem(15px) px2rem(22px) 0 px2rem(6px) rgba(93, 4, 39, .15);
+        }
+        .detail-img {
+            overflow: hidden;
+            .border {
+                height: px2rem(12px);
+                background: url('../../../assets/images/border.png') 0 0 /100% 100% no-repeat;
+            }
+            .content {
+                width: px2rem(812px);
+
+                margin: px2rem(30px) auto;
+
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+
+    }
+}

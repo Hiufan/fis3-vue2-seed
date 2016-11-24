@@ -1,0 +1,87 @@
+@import '../../../assets/scss/px2rem.scss';
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    width: px2rem(632px);
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: px2rem(30px);
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+.modal-header h3 {
+    text-align: center;
+    @include font-dpr(30px);
+    background: linear-gradient(top, #efefef, #dbdada);
+    line-height: px2rem(90px);
+    color: #232323;
+}
+
+.modal-body {
+    padding: px2rem(66px) 0;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #959595;
+    h2 {
+        margin-bottom: px2rem(22px);
+        @include font-dpr(40px);
+    }
+    p {
+        @include font-dpr(28px);
+    }
+}
+
+.modal-footer {
+    div {
+        display: flex;
+        justify-content: flex-start;
+        line-height: px2rem(130px);
+        text-align: center;
+    }
+    a:first-child {
+        border-left: none;
+    }
+    a {
+        flex: 1;
+        @include font-dpr(28px);
+        border-left: 1px solid #959595;
+        color: #000;
+    }
+}
+
+
+/*
+ * the following styles are auto-applied to elements with
+ * v-transition="modal" when their visiblity is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter,
+.modal-leave {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

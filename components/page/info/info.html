@@ -1,0 +1,50 @@
+<div id="info">
+    <loading :loading="!loaded"></loading>
+    <div class="info-bg"> </div>
+    <div v-if="bDialog" class="info-dialog">
+    	<div class="dialog-con">
+    		<a href="/2016_11_11/#!/index"></a>
+    	</div>
+    </div>
+    <div v-if="loaded" class="info-wrap">
+        <img class="info-top" src="../../../assets/images/info-top.png" />
+        <validator name="valiInfo">
+            <div class="info-form">
+                <div class="form-group clear">
+                    <label>姓名</label>
+                    <input initial="off" detect-change="on" v-validate:name="{required: {rule: true},maxlength: 10}" v-el:name v-model="name" type="text" name="name">
+                </div>
+                <p v-if="$valiInfo.name.required">请输入姓名</p>
+                <p v-if="$valiInfo.name.maxlength">不能超过10个字符</p>
+                <div class="form-group clear">
+                    <label>电话</label>
+                    <input initial="off" detect-change="on" v-validate:phone="['phone']" v-model="phone" type="text" name="phone">
+                </div>
+                <p v-if="$valiInfo.phone.phone">请输入正确的电话号码</p>
+                <div class="form-group clear">
+                    <label>城市</label>
+                    <select initial="off" detect-change="on" v-validate:city="['required']" v-model="area" >
+                        <option>请选择城市</option>
+                        <option v-for="item in shopData" :value="{areaId:item.areaId,shops: item.shops}">{{item.areaName}}</option>
+                    </select>
+                    <span class="triangle"></span>
+                </div>
+                <p v-if="$valiInfo.city.required">请选择城市</p>
+
+                <div class="form-group clear">
+                    <label>车店</label>
+                    <select initial="off" detect-change="on" v-validate:bikeshop="['required']" v-model="shop">
+                        <option>请选择车店</option>
+
+                        <option  v-if="!!area" v-for="item in area.shops" :value="item.shopId">{{item.shopName}}</option>
+                    </select>
+                    <span class="triangle"></span>
+                </div>
+                <p v-if="$valiInfo.bikeshop.required">请选择车店</p>
+                <a v-if="type == 2" @click="statsE({'ec': 'buy', 'ea': 'form_submit','ed': id}),infoSumit()" href="javascript:;" class="form-submit">确认提交</a>
+                <a v-if="type == 3" @click="statsE({'ec': 'book', 'ea': 'form_submit','ed': id}),infoSumit()" href="javascript:;" class="form-submit">确认提交</a>
+                <a v-if="type == 4" @click="statsE({'ec': 'quan', 'ea': 'form_submit','ed': id}),infoSumit()" href="javascript:;" class="form-submit">确认提交</a>
+            </div>
+        </validator>
+    </div>
+</div>

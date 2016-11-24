@@ -1,0 +1,190 @@
+@import '../../../assets/scss/px2rem.scss';
+.common-bg {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: px2rem(1080px);
+    height: 100%;
+    // height: 100vh;
+    z-index: -2;
+    background: url('../../../assets/images/body-bg.jpg') 0 0 / 100% 100% no-repeat;
+}
+
+.ball {
+    position: fixed;
+    bottom: px2rem(24px);
+    right: px2rem(30px);
+    width: px2rem(164px);
+    z-index: 10;
+    a {
+        display: inline-block;
+        height: px2rem(164px);
+        width: px2rem(164px);
+        margin-bottom: px2rem(16px);
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        @include font-dpr(22px);
+        background-color: rgba(71, 71, 71, 0.9);
+        line-height: px2rem(164px);
+    }
+}
+
+#brand {
+    height: 100%;
+    .top-wrap {
+        padding-top: px2rem(50px);
+        position: relative;
+        span {
+            position: absolute;
+            top: px2rem(90px);
+            left: 0;
+            height: px2rem(236px);
+            width: px2rem(95px);
+            background: url('../../../assets/images/book-button.png') 0 0 /100% 100% no-repeat;
+            z-index: 1;
+        }
+    }
+    .top {
+        display: flex;
+        justify-content: flex-start;
+        height: px2rem(223px);
+        width: px2rem(890px);
+        margin: 0 auto;
+        padding: px2rem(50px);
+        background-color: rgba(255, 255, 255, .95);
+        border-radius: px2rem(22px);
+        box-shadow: px2rem(15px) px2rem(22px) 0 px2rem(6px) rgba(93, 4, 39, .15);
+        img {
+            display: flex;
+            align-items: center;
+            padding: 0 px2rem(30px);
+            width: px2rem(340px);
+            max-height: px2rem(223px);
+        }
+        div {
+            max-width: px2rem(485px);
+            max-height: px2rem(223px);
+            line-height: px2rem(46px);
+            overflow: auto;
+            color: #353535;
+            @include font-dpr(22px);
+        }
+    }
+    .bike-list-w {
+        padding-bottom: px2rem(48px);
+    }
+    .bike-list {
+        width: px2rem(990px);
+        margin: px2rem(90px) auto 0;
+        padding-bottom: px2rem(34px);
+        background-color: #fff;
+        box-shadow: px2rem(15px) px2rem(22px) 0 px2rem(6px) rgba(93, 4, 39, .15);
+        h1 {
+            height: px2rem(125px);
+            background: url('../../../assets/images/hot-bikes.png') 0 0 /100% 100% no-repeat;
+        }
+        .more {
+            display: block;
+            height: px2rem(80px);
+            width: px2rem(148px);
+            margin: 0 auto;
+            background: url('../../../assets/images/more.png') 50% 50% / 40% auto no-repeat;
+        }
+        @at-root {
+            .brand-bike-list {
+                a {
+                    border-top: 1px solid #959595;
+                }
+                a:first-child {
+                    border-bottom: none;
+                }
+            }
+            .bike-info {
+                display: flex;
+                justify-content: flex-start;
+                padding: px2rem(44px) px2rem(50px) px2rem(22px);
+                img {
+                    display: flex;
+                    align-items: center;
+                    height: px2rem(304px);
+                    width: px2rem(426px);
+                    margin-right: px2rem(35px);
+                }
+                h2 {
+                    max-width: px2rem(430px);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    color: #000;
+                    text-overflow: ellipsis;
+                    line-height: px2rem(68px);
+                    font-weight: bolder;
+                    @include font-dpr(34px);
+                }
+                .guide-price,
+                .discount {
+                    margin-top: px2rem(12px);
+                    @include font-dpr(22px);
+                    color: #888888;
+                    span {
+                        display: inline-block;
+                        margin-left: px2rem(12px);
+                        color: #f60019;
+                        @include font-dpr(24px);
+                    }
+                    em {
+                        display: inline-block;
+                        margin-left: px2rem(12px);
+                        font-weight: bolder;
+                        @include font-dpr(30px);
+                    }
+                }
+                .market-price {
+                    margin-top: px2rem(10px);
+                    @include font-dpr(22px);
+                    color: #888888;
+                    span {
+                        display: inline-block;
+                        margin-left: px2rem(12px);
+                        @include font-dpr(18px);
+                        color: #000;
+                    }
+                    em {
+                        display: inline-block;
+                        margin-left: px2rem(12px);
+                        text-decoration: line-through;
+                        @include font-dpr(22px);
+                    }
+                }
+                .discount {
+                    color: #f60019;
+                }
+                .premium {
+                    color: #d8001d;
+                    @include font-dpr(22px);
+                    margin-top: px2rem(10px);
+                }
+                .buysoon {
+                    font-weight: bolder;
+                    @include font-dpr(34px);
+                }
+            }
+            .btn.grey {
+                background: linear-gradient(top, #acacac, #898989);
+                border: 1px solid #7d7d7d;
+            }
+            .btn {
+                display: inline-block;
+                margin-top: px2rem(24px);
+                padding: px2rem(12px) px2rem(10px);
+                color: #fff;
+                @include font-dpr(22px);
+                border-radius: px2rem(6px);
+                text-align: center;
+                border: 1px solid #3367c7;
+                background: linear-gradient(top, #74a8ed, #5084e7);
+            }
+        }
+    }
+}
