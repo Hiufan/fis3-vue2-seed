@@ -1,30 +1,25 @@
-import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from '../views/home/home'
+import About from '../views/about/about'
+const Default = { template: '<div class="default">default</div>' }
+const Foo = { template: '<div class="foo">foo</div>' }
+const Bar = { template: '<div class="bar">bar</div>' }
 
-Vue.use(VueRouter)
-
-// 1. Define route components.
-// These can be imported from other files
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
-// 2. Define some routes
-// Each route should map to a component. The "component" can
-// either be an actual component constructor created via
-// Vue.extend(), or just a component options object.
-// We'll talk about nested routes later.
-const routes = [
-  { path: '/', component: Home },
-  { path: '/bar', component: Bar }
-]
-
-// 3. Create the router instance and pass the `routes` option
-// You can pass in additional options here, but let's
-// keep it simple for now.
 const router = new VueRouter({
-  routes
+	base: __dirname,
+	routes: [
+		{ path: '/', component: Home },
+		{ path: '/default', component: Default },
+		{ path: '/foo', component: Foo },
+		{ path: '/bar', component: Bar },
+		{ path: '/about', component: About}
+	]
 })
 
 export default router
+
+// export default {
+//   '/': 'Home',
+//   '/about': 'About'
+// }

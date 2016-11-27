@@ -1,10 +1,12 @@
-import Vue from 'vue'
+// 引入基础依赖
+import Vue from 'vue/dist/vue'
+import VueRouter from 'vue-router'
+
+// 引入路由配置
 import router from './router'
 
-const App = Vue.extend({
-    template: '<router-view></router-view>'
-});
+Vue.use(VueRouter)
 
-const app = new Vue(Vue.util.extend({
+new Vue({
   router
-}, App))
+}).$mount('#app')
