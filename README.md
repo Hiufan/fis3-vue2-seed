@@ -1,3 +1,4 @@
+      这个项目尚未完善，还无法正常运行。
 # fis3-vue2-seed
 Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
 
@@ -12,6 +13,7 @@ Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
 *   fis-parser-babel-5.x
 
 ## 项目结构
+```
 fis3-vue2-seed
 |---- assets #静态资源
       |---- script #非工程模块js脚本
@@ -27,3 +29,4 @@ fis3-vue2-seed
 |---- fis.conf #fis3的配置文件
 |---- package.json #依赖
 |---- main.es #入口文件 
+```
