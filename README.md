@@ -1,7 +1,7 @@
-   这个项目尚未完善，还无法正常运行。
-      
 # fis3-vue2-seed
 Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
+
+>  这个项目尚未完善，还无法正常运行。
 
 # 安装yarn
 [yarn —— Nodejs包新管理工具](https://segmentfault.com/a/1190000007189426)
