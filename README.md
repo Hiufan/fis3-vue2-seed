@@ -1,6 +1,8 @@
 # fis3-vue2-seed
 Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
 
+>  这个项目尚未完善，还无法正常运行。
+
 # 安装yarn
 [yarn —— Nodejs包新管理工具](https://segmentfault.com/a/1190000007189426)
 
@@ -13,6 +15,7 @@ Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
 *   fis3-preprocessor-autoprefixer
 
 ## 项目结构
+```
 fis3-vue2-seed
 |---- assets #静态资源
       |---- script #非工程模块js脚本
@@ -28,3 +31,4 @@ fis3-vue2-seed
 |---- fis.conf #fis3的配置文件
 |---- package.json #依赖
 |---- main.es #入口文件 
+```
