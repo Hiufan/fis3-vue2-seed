@@ -10,9 +10,9 @@ const router = new VueRouter({
 	base: __dirname,
 	routes: [
 		{ path: '/', component: Home },
-		{ path: '/default', component: Default },
-		{ path: '/foo', component: Foo },
-		{ path: '/bar', component: Bar },
+		// { path: '/default', component: Default },
+		// { path: '/foo', component: Foo },
+		// { path: '/bar', component: Bar },
 		{ path: '/about', component: About}
 	]
 })

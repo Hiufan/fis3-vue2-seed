@@ -10,6 +10,7 @@ Using [fis3](http://fis.baidu.com/) to build vue(2.0) application.
 *   fis3-hook-relative
 *   fis3-postpackager-loader
 *   fis-parser-babel-5.x
+*   fis3-preprocessor-autoprefixer
 
 ## 项目结构
 fis3-vue2-seed

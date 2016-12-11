@@ -5,6 +5,8 @@ import VueRouter from 'vue-router'
 // 引入路由配置
 import router from './router'
 
+Vue.config.devtools = true
+
 Vue.use(VueRouter)
 
 new Vue({
